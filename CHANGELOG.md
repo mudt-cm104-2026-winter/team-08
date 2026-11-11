@@ -8,6 +8,6 @@ Example:
 
 ## Unreleased
 
+- README: topic is now a reading list (#10)
 - README: how we work (#8)
 - Start from the repository template
-- README: topic is now a reading list (#10)
