@@ -29,6 +29,7 @@ No real names: this repository is public. -->
 
 | GitHub | Role |
 |---|---|
+| 64gwkfc9v9-ai | Board and issues |
 
 ## How we work
 
