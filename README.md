@@ -33,12 +33,12 @@ No real names: this repository is public. -->
 
 ## How we work
 
-<!-- How your team uses Git. For example:
-- one branch per issue, named after it: `12-add-glossary`
-- every pull request needs one approval from another team member
-- the author merges after the approval
-- every pull request adds a line to CHANGELOG.md
--->
+- Every piece of work starts as an issue and is a sub-issue of one of our three epics.
+- One branch per issue, named after it, e.g. `8-how-we-work`.
+- Every pull request says `closes #n` in its description, plus what changed and why.
+- Nobody pushes to `main`: every pull request needs one approval from another team member.
+- The author merges after the approval.
+- Every pull request adds one line at the top of `## Unreleased` in CHANGELOG.md.
 
 ## Sources
 
