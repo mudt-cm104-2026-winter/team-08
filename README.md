@@ -1,6 +1,4 @@
-# Team project
-
-<!-- Replace the title with your project name. -->
+# Reading List
 
 ## What this is
 
