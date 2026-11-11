@@ -29,6 +29,7 @@ No real names: this repository is public. -->
 
 | GitHub | Role |
 |---|---|
+|DeryaG08|team member|
 |amikristulii|team member|
 | 64gwkfc9v9-ai | Board and issues |
 
