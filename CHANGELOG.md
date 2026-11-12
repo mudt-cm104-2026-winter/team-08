@@ -4,7 +4,7 @@
 - what changed, in one sentence (#<pull request number>)
 Example:
 - Entries can be deleted (#7)
---
+-->
 
 ## Unreleased
 
