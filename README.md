@@ -2,8 +2,8 @@
 
 ## What this is
 
-<!-- One or two sentences: what does your app do, and who is it for?
-Right now it is the example "Things to bring". Replace it with your topic. -->
+   A small web app for keeping a reading list. You enter a book's title and author, and the app shows all your books as a list.
+   It is for students who want to keep track of the books they want to read.
 
 ## How to run it
 
