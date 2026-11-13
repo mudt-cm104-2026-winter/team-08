@@ -10,3 +10,4 @@ Example:
 
 - README: how we work (#8)
 - Start from the repository template
+- README: sources and use of AI (#9)

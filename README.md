@@ -44,13 +44,12 @@ No real names: this repository is public. -->
 
 ## Sources
 
-<!-- One entry per source, added on the day you use it:
-- 2026-11-05: <title or link>, used for <what>
--->
+- 2026-11-05: course sheet "assessment-1-team-project.md", used for the stage 1 requirements
+- 2026-11-05: Teams video 07 "A pull request, start to finish", used for branches, pull requests and reviews
 
 ## Use of AI
 
-<!-- One entry per use, added on the day you use it:
-- 2026-11-05: <tool>, used for <what>, checked by <how you checked the result>
-"none" is a valid entry.
--->
+- 2026-11-11: Claude, checked our repo against the checklist.
+- 2026-11-12: Claude, step-by-step help renaming the app fields for PR #21 (#11).
+- 2026-11-13: Claude, help with checking by reviewing the diffs and testing the page
+
