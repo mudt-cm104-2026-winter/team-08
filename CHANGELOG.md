@@ -8,6 +8,7 @@ Example:
 
 ## Unreleased
 
+- App: the book list is sorted A-Z by title (#4)
 - App: the page shows how many books are on the list (#13)
 - App: entries are now books with title and author (#11)
 - README: topic is now a reading list (#10)
