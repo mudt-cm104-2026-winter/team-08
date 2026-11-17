@@ -8,6 +8,7 @@ Example:
 
 ## Unreleased
 
+- Style: bookshop, desk and bookshelf (#31)
 - Page: three columns, a bookshelf and achievements (#29)
 - App: books have a status, and finished books earn achievements (#26)
 - App: the book list is sorted A-Z by title (#4)
