@@ -9,37 +9,91 @@
 </head>
 
 <body>
-  <main>
+  <header class="top">
     <h1>Reading list</h1>
-    <p class="intro">Books we want to read.</p>
+    <p class="count">Books on your list: {{ want|length + reading|length + finished|length }}</p>
+  </header>
 
-    <form class="add" action="/add" method="post">
-      <input name="title" placeholder="Title" required autocomplete="off" autofocus>
-      <input name="author" placeholder="Author" required autocomplete="off">
-      <button type="submit">Add</button>
-    </form>
+  <main class="board">
 
-    {% if entries %}
-    <p class="count">Books on your list: {{ entries|length }}</p>
-    <table>
-      <thead>
-        <tr>
-          <th>Title</th>
-          <th>Author</th>
-        </tr>
-      </thead>
-      <tbody>
-        {% for entry in entries %}
-        <tr>
-          <td>{{ entry.title }}</td>
-          <td>{{ entry.author }}</td>
-        </tr>
+    <!-- Column 1: books you want to read -->
+    <section class="column column-want">
+      <h2>Want to read <span class="tally">{{ want|length }}</span></h2>
+
+      <form class="add" action="/add" method="post">
+        <label>Title <input name="title" required maxlength="120" autocomplete="off"></label>
+        <label>Author <input name="author" required maxlength="120" autocomplete="off"></label>
+        <button type="submit">Add book</button>
+      </form>
+
+      <ul class="cards">
+        {% for book in want %}
+        <li class="card">
+          <h3>{{ book.title }}</h3>
+          <p>{{ book.author }}</p>
+          <div class="actions">
+            <form action="/move/{{ book.id }}" method="post">
+              <input type="hidden" name="status" value="reading">
+              <button type="submit">Start reading</button>
+            </form>
+            <form action="/delete/{{ book.id }}" method="post">
+              <button type="submit" class="quiet">Remove</button>
+            </form>
+          </div>
+        </li>
+        {% else %}
+        <li class="empty">No books yet. Add the first one above.</li>
         {% endfor %}
-      </tbody>
-    </table>
-    {% else %}
-    <p class="empty">No books yet.</p>
-    {% endif %}
+      </ul>
+    </section>
+
+    <!-- Column 2: the books you are reading -->
+    <section class="column column-reading">
+      <h2>Currently reading <span class="tally">{{ reading|length }}</span></h2>
+
+      <ul class="cards">
+        {% for book in reading %}
+        <li class="card">
+          <h3>{{ book.title }}</h3>
+          <p>{{ book.author }}</p>
+          <div class="actions">
+            <form action="/move/{{ book.id }}" method="post">
+              <input type="hidden" name="status" value="finished">
+              <button type="submit">Finish book</button>
+            </form>
+            <form action="/move/{{ book.id }}" method="post">
+              <input type="hidden" name="status" value="want">
+              <button type="submit" class="quiet">Put back</button>
+            </form>
+          </div>
+        </li>
+        {% else %}
+        <li class="empty">Nothing on the desk. Press “Start reading” on a book.</li>
+        {% endfor %}
+      </ul>
+    </section>
+
+    <!-- Column 3: finished books -->
+    <section class="column column-finished">
+      <h2>Finished <span class="tally">{{ finished|length }}</span></h2>
+
+      <ul class="shelf">
+        {% for book in finished %}
+        <li class="spine" title="{{ book.title }} by {{ book.author }}">{{ book.title }}</li>
+        {% endfor %}
+      </ul>
+
+      <h3 class="achievements-title">Achievements</h3>
+      <ul class="achievements">
+        {% for achievement in achievements %}
+        <li class="badge {% if achievement.earned %}earned{% endif %}">
+          <span class="badge-number">{{ achievement.books }}</span>
+          {{ achievement.name }}
+        </li>
+        {% endfor %}
+      </ul>
+    </section>
+
   </main>
 </body>
 
