@@ -1,26 +1,41 @@
-"""Where the entries are kept.
+"""Where the books are kept.
 
-For now: a Python list in memory. Simple, and it forgets everything when
-the app restarts. That is fine for this stage.
+A Python list in memory. Simple, and it forgets everything when the app
+restarts. That is fine for this stage.
 
-The rest of the app only uses the functions below. Later in the semester
-this file can be replaced by one that keeps the entries somewhere else.
-As long as the function names stay the same, main.py does not change.
+Every book is a dictionary with an id, a title, an author and a status.
+The status says in which column the book is:
+"want" (want to read), "reading" (currently reading) or "finished".
 """
 
-_entries = []
+_books = []
 _next_id = 1
 
 
-def all_entries():
-    """Return all entries, sorted A-Z by title."""
-    return sorted(_entries, key=lambda entry: entry["title"].lower())
+def books_with_status(status):
+    """All books of one column, sorted A-Z by title."""
+    found = [book for book in _books if book["status"] == status]
+    return sorted(found, key=lambda book: book["title"].lower())
 
 
-def add_entry(title, author):
-    """Store a new entry and return it."""
+def add_book(title, author):
+    """Store a new book. It starts in the "want to read" column."""
     global _next_id
-    entry = {"id": _next_id, "title": title, "author": author}
-    _entries.append(entry)
+    book = {"id": _next_id, "title": title, "author": author, "status": "want"}
+    _books.append(book)
     _next_id += 1
-    return entry
+
+
+def move_book(book_id, status):
+    """Put a book into another column."""
+    for book in _books:
+        if book["id"] == book_id:
+            book["status"] = status
+
+
+def delete_book(book_id):
+    """Remove a book from the list."""
+    for book in _books:
+        if book["id"] == book_id:
+            _books.remove(book)
+            return
