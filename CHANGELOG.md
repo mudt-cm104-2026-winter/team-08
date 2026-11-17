@@ -8,6 +8,7 @@ Example:
 
 ## Unreleased
 
+- App: books have a status, and finished books earn achievements (#26)
 - App: the book list is sorted A-Z by title (#4)
 - README: sources and use of AI (#9)
 - App: the page shows how many books are on the list (#13)
