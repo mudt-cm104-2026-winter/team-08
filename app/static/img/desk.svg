@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 320">
+  <!-- Seen from the ceiling: a person at a desk, reading an open book.
+       No background: the wooden desk itself is drawn in scenes.css. -->
+  <defs>
+    <linearGradient id="fold" x1="0" x2="1">
+      <stop offset="0" stop-color="#000" stop-opacity="0"/>
+      <stop offset=".5" stop-color="#000" stop-opacity=".28"/>
+      <stop offset="1" stop-color="#000" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- pencil and coffee mug -->
+  <g transform="rotate(-24 44 70)">
+    <rect x="38" y="30" width="9" height="70" rx="2" fill="#c9a04a"/>
+    <rect x="38" y="30" width="9" height="9" fill="#d98f8a"/>
+    <path d="M38 100 h9 l-4.5 12 Z" fill="#e8d5b0"/>
+  </g>
+  <ellipse cx="369" cy="45" rx="27" ry="27" fill="#000" opacity=".18"/>
+  <circle cx="366" cy="40" r="26" fill="#e7dcc3"/>
+  <circle cx="366" cy="40" r="18" fill="#fbf6ea"/>
+  <circle cx="366" cy="40" r="14" fill="#4a2c1a"/>
+  <path d="M366 60 v9" stroke="#fbf6ea" stroke-width="8" stroke-linecap="round"/>
+
+  <!-- the open book -->
+  <rect x="62" y="36" width="276" height="158" rx="5" fill="#000" opacity=".25" transform="translate(4 6)"/>
+  <rect x="62" y="36" width="276" height="158" rx="5" fill="#7d2f2b"/>
+  <path d="M70 46 Q135 36 200 46 V186 Q135 176 70 186 Z" fill="#f3ead4"/>
+  <path d="M330 46 Q265 36 200 46 V186 Q265 176 330 186 Z" fill="#efe6d0"/>
+  <rect x="180" y="42" width="40" height="146" fill="url(#fold)"/>
+  <g stroke="#8d8672" stroke-width="2.4" stroke-linecap="round">
+    <path d="M86 66 H184 M86 80 H184 M86 94 H184 M86 108 H170 M86 128 H184 M86 142 H184 M86 156 H150"/>
+    <path d="M216 66 H314 M216 80 H314 M216 94 H290 M216 114 H314 M216 128 H314 M216 142 H314 M216 156 H270"/>
+  </g>
+
+  <!-- shoulders and arms (a green jumper) -->
+  <ellipse cx="200" cy="330" rx="150" ry="62" fill="#2f5144"/>
+  <g stroke="#2f5144" stroke-width="44" stroke-linecap="round" fill="none">
+    <path d="M78 318 Q52 250 78 186"/>
+    <path d="M322 318 Q348 250 322 186"/>
+  </g>
+  <g stroke="#27443a" stroke-width="3" fill="none" opacity=".7">
+    <path d="M58 202 q20 8 40 0 M342 202 q-20 8 -40 0"/>
+  </g>
+  <!-- hands holding the book -->
+  <ellipse cx="80" cy="168" rx="20" ry="24" fill="#d9a67e"/>
+  <ellipse cx="320" cy="168" rx="20" ry="24" fill="#d9a67e"/>
+  <path d="M92 158 q16 -2 22 8" stroke="#d9a67e" stroke-width="11" stroke-linecap="round" fill="none"/>
+  <path d="M308 158 q-16 -2 -22 8" stroke="#d9a67e" stroke-width="11" stroke-linecap="round" fill="none"/>
+
+  <!-- the head from above: hair, ears, the tip of the nose, a bun -->
+  <ellipse cx="200" cy="268" rx="62" ry="58" fill="#000" opacity=".2" transform="translate(3 5)"/>
+  <ellipse cx="143" cy="262" rx="8" ry="12" fill="#d9a67e"/>
+  <ellipse cx="257" cy="262" rx="8" ry="12" fill="#d9a67e"/>
+  <ellipse cx="200" cy="214" rx="9" ry="8" fill="#d9a67e"/>
+  <ellipse cx="200" cy="264" rx="56" ry="54" fill="#3b2618"/>
+  <path d="M200 212 Q196 250 200 300" stroke="#55392a" stroke-width="3" fill="none"/>
+  <path d="M168 226 q-14 34 0 70 M232 226 q14 34 0 70" stroke="#4a3122" stroke-width="2.5" fill="none"/>
+  <circle cx="200" cy="304" r="20" fill="#32200f"/>
+</svg>
