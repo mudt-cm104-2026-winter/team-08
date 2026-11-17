@@ -2,8 +2,8 @@
 
 ## What this is
 
-   A small web app for keeping a reading list. You enter a book's title and author, and the app shows all your books as a list.
-   It is for students who want to keep track of the books they want to read.
+   A web app for your reading list. You add the books you want to read, move them to "Currently reading" and then to "Finished", where they stand on a bookshelf. Finished books earn achievements.
+It is for students who want to keep track of their reading.
 
 ## How to run it
 
